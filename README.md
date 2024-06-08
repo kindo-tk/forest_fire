@@ -106,5 +106,7 @@ For any inquiries or feedback, please contact:
 
 - <a href="https://www.linkedin.com/in/tufan-kundu-577945221/">Tufan Kundu (LinkedIn)</a>
 - Email: tufan.kundu11@gmail.com
-
-
+<hr>
+<br>
+<img src="https://github.com/kindo-tk/images/blob/main/forest_fire/homepage.png">
+<img src = "https://github.com/kindo-tk/images/blob/main/forest_fire/result.png">
