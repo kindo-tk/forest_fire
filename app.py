@@ -4,8 +4,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Initialize Flask application
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
 
 # Load models and scalers
 try:
