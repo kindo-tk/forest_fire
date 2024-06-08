@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FWI Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">FWI Prediction</h1>
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+            <div class="form-group">
+                <label for="Temperature">Temperature (°C)</label>
+                <input type="number" step="any" class="form-control" id="Temperature" name="Temperature" placeholder="Enter Temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="RH">Relative Humidity (%)</label>
+                <input type="number" step="any" class="form-control" id="RH" name="RH" placeholder="Enter Relative Humidity" required>
+            </div>
+            <div class="form-group">
+                <label for="Ws">Wind Speed (km/h)</label>
+                <input type="number" step="any" class="form-control" id="Ws" name="Ws" placeholder="Enter Wind Speed" required>
+            </div>
+            <div class="form-group">
+                <label for="Rain">Rain (mm)</label>
+                <input type="number" step="any" class="form-control" id="Rain" name="Rain" placeholder="Enter Rain" required>
+            </div>
+            <div class="form-group">
+                <label for="FFMC">FFMC Index</label>
+                <input type="number" step="any" class="form-control" id="FFMC" name="FFMC" placeholder="Enter FFMC Index" required>
+            </div>
+            <div class="form-group">
+                <label for="DMC">DMC Index</label>
+                <input type="number" step="any" class="form-control" id="DMC" name="DMC" placeholder="Enter DMC Index" required>
+            </div>
+            <div class="form-group">
+                <label for="ISI">ISI Index</label>
+                <input type="number" step="any" class="form-control" id="ISI" name="ISI" placeholder="Enter ISI Index" required>
+            </div>
+            <div class="form-group">
+                <label for="Classes">Classes (0 or 1)</label>
+                <input type="number" step="any" class="form-control" id="Classes" name="Classes" placeholder="Enter Classes" required>
+            </div>
+            <div class="form-group">
+                <label for="Region">Region (0 or 1)</label>
+                <input type="number" step="any" class="form-control" id="Region" name="Region" placeholder="Enter Region" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+        {% if result is not none %}
+        <div class="alert alert-info mt-4 text-center">
+            <h4>The FWI prediction is: {{ result }}</h4>
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
