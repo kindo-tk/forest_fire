@@ -86,6 +86,10 @@ The model uses the following features for prediction:
 
 The model will output the predicted Fire Weather Index (FWI) based on the input parameters.
 
+## Deployment
+
+You can access the deployed application at the following URL: https://forest-fire-z70n.onrender.com
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps to contribute:
