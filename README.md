@@ -46,19 +46,19 @@ The model uses the following features for prediction:
     ```sh
     git clone https://github.com/kindo-tk/forest_fire.git
     ```
-2. **Navigate to project directory:**
+2. **Navigate to the project directory:**
 
     ```sh
     cd .\forest_fire\
     ```
 
-2. **Create a virtual environment:**
+3. **Create a virtual environment:**
 
     ```sh
     python -m venv .venv
     ```
 
-3. **Activate the virtual environment:**
+4. **Activate the virtual environment:**
 
    ```sh
    .venv\Scripts\activate
